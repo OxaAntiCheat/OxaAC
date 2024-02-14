@@ -1,0 +1,373 @@
+#------------------------- [OXA ANTI-CHEAT] -------------------------
+#----------------------------- [v1.3.5] -----------------------------
+#---------------------------- [Bye Aorux] ---------------------------
+
+#Thank you for installing Oxa AntiCheat! We hope that it will help
+#you as much as possible and that it will suit you. Please use the
+#sign “§” instead of “&” (for example replaced &6 by §6 !).
+
+#--------------------------------------------------------------------
+# CONFIGURATION
+#--------------------------------------------------------------------
+config:
+  # Configuration langage.
+  # en_GB : British English | en_US : American English | fr : Français | es : Español | de : Deutsch | it : Italiano
+  lang: en_GB
+
+#--------------------------------------------------------------------
+# WHITE LIST CONFIGURATION
+#--------------------------------------------------------------------
+white-list:
+  # its players will not be punished if they use cheats.
+  player:
+    # list of players.
+    - Player1
+    - Player2
+    - Player3
+
+#--------------------------------------------------------------------
+# DISCORD WEBHOOK CONFIGURATION
+#--------------------------------------------------------------------
+webhook:
+  # Discord webhook setup for reporting.
+  alerts:
+    enabled: false
+    webhook-url: "URL"
+    title: "Oxa Anti-Cheat"
+    description: "The %player_username% player is using the following cheat : %cheat_name%."
+
+  # Discord webhook setup for punishments. (kill, ban...)
+  punishments:
+    enabled: false
+    webhook-url: "URL"
+    title: "Oxa Anti-Cheat"
+    kick:
+      description: "The %player_username% player was kicked for using the following cheat : %cheat_name%."
+    ban:
+      description: "The %player_username% player has been banned for using the following cheat : %cheat_name%."
+
+#--------------------------------------------------------------------
+# ANTI CHEAT CONFIGURATION
+#--------------------------------------------------------------------
+#--------------------------------------------------------------------
+# ANTI SNEAK AND SPRINT
+#--------------------------------------------------------------------
+anti-sneak-sprint:
+  # enable or disable
+  enabled: true
+
+  speed-max: 2.50
+
+  max-violations: 10
+
+  time-ban-enabled: true
+
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  report: "It looks like you are using a cheat that allows you to sprint and sneak. You will be a kicker and report to the staff."
+  broadcast: " is using a cheat sprint and sneak."
+  kick-message: "You were kicked for cheat."
+  ban-message: "You have been banned for Cheat."
+
+#--------------------------------------------------------------------
+# ANTI DISABLED POTION EFFECT
+#--------------------------------------------------------------------
+verification-potion:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  report: "It looks like you are using a cheat that allows you to invalid Packet. You will be a kicker and report to the staff."
+  broadcast: " is using a invalid packet."
+  kick-message: "You were kicked for cheat."
+  ban-message: "You have been banned for Cheat."
+
+#--------------------------------------------------------------------
+# ANTI FALL DAMAGE
+#--------------------------------------------------------------------
+verification-fall:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  report: "It looks like you are using a cheat that allows you to antifall. You will be a kicker and report to the staff."
+  broadcast: " is using a cheat to AntiFall"
+  kick-message: "You were kicked for cheat."
+  ban-message: "You have been banned for Cheat."
+
+#--------------------------------------------------------------------
+# ANTI DISABLED KNOCKBACK
+#--------------------------------------------------------------------
+verification-knockback:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  report: "It looks like you are using a cheat that allows you to anti knockback. You will be a kicker and report to the staff."
+  broadcast: " is using a cheat to KnockBack"
+  kick-message: "You were kicked for cheat."
+  ban-message: "You have been banned for Cheat."
+
+#--------------------------------------------------------------------
+# ANTI KILLAURA
+#--------------------------------------------------------------------
+anti-killaura:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  broadcast: "is using a cheat to KillAura"
+  report: "It looks like you are using a cheat that allows you to kill aura. You will be a kicker and report to the staff."
+  kick-message: " You were kicked for cheat."
+  ban-message: "You have been banned for Cheat."
+
+#--------------------------------------------------------------------
+# ANTI AIMASSIST
+#--------------------------------------------------------------------
+anti-aimassist:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  broadcast: " is using a cheat to AimAssist"
+  kick-message: "You were kicked for cheat."
+  report: "It looks like you are using a cheat that allows you to AimAssist. You will be a kicker and report to the staff."
+  ban-message: "You have been banned for Cheat."
+
+
+#--------------------------------------------------------------------
+# ANTI SPEED
+#--------------------------------------------------------------------
+anti-speed:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  # speed max.
+  speed-max: 1.85
+
+  # speed max sprint.
+  speed-max-sprint: 4.25
+
+  # speed max sprint and jump.
+  speed-max-sprint-and-jump: 5.35
+
+  # speed max on the ice.
+  speed-max-on-ice: 5.00
+
+  broadcast: " is using a cheat to Speed"
+  report: "It looks like you are using a cheat that allows you to speed. You will be a kicker and report to the staff."
+  kick-message: "You were kicked for cheat."
+  ban-message: "You have been banned for Cheat."
+
+
+#--------------------------------------------------------------------
+# ANTI JESUS
+#--------------------------------------------------------------------
+anti-jesus:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  broadcast: " is using a cheat to Jesus"
+  report: "It looks like you are using a cheat that allows you to jesus. You will be a kicker and report to the staff."
+  kick-message: "You were kicked for cheat."
+  ban-message: "You have been banned for Cheat."
+
+#--------------------------------------------------------------------
+# ANTI WALK ON THE LAVA
+#--------------------------------------------------------------------
+anti-walk-lava:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  broadcast: " is using a cheat to walk on the lava"
+  report: "It looks like you are using a cheat that allows you to walk on the lava. You will be a kicker and report to the staff."
+  kick-message: "You were kicked for cheat."
+  ban-message: "You have been banned for Cheat."
+
+#--------------------------------------------------------------------
+# ANTI FAST EAT
+#--------------------------------------------------------------------
+anti-fast-eat:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  broadcast: " is using a cheat to fastEat"
+  report: "It looks like you are using a cheat that allows you to fast-eat. You will be a kicker and report to the staff."
+  kick-message: "You were kicked for cheat."
+  ban-message: "You have been banned for Cheat."
+
+#--------------------------------------------------------------------
+# ANTI FAST BOW
+#--------------------------------------------------------------------
+anti-fast-bow:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  broadcast: " is using a cheat to FastBow"
+  report: "It looks like you are using a cheat that allows you to fast-bow. You will be a kicker and report to the staff."
+  kick-message: "You were kicked for cheat."
+  ban-message: "You have been banned for Cheat."
+
+#--------------------------------------------------------------------
+# ANTI FLY
+#--------------------------------------------------------------------
+anti-fly:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  broadcast: " is using a cheat to Fly"
+  report: "It looks like you are using a cheat that allows you to fly. You will be a kicker and report to the staff."
+  kick-message: "You were kicked for cheating."
+  ban-message: "You have been banned for Cheat."
+
+#--------------------------------------------------------------------
+# ANTI HEADROLL
+#--------------------------------------------------------------------
+anti-headroll:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  broadcast: " is using a cheat to headroll"
+  report: "It looks like you are using a cheat that allows you to headroll. You will be a kicker and report to the staff."
+  kick-message: "You were kicked for cheat."
+  ban-message: "You have been banned for Cheat."
+
+#--------------------------------------------------------------------
+# PACKET CHEACKER
+#--------------------------------------------------------------------
+phasing-monitor:
+  # enable or disable
+  enabled: true
+
+#--------------------------------------------------------------------
+# ANTI REACH HACK
+#--------------------------------------------------------------------
+reach-hack:
+  # enable or disable.
+  enabled: true
+
+  # maximum number of kicks before banning.
+  max-violations: 10
+
+  # banned for life or for a certain time ?
+  time-ban-enabled: true
+
+  # last of the ban.
+  time-ban: 24 # hours (example : 48 = 48 hours = 2 days...)
+
+  # max reach
+  max-reach: 5.0
+
+  broadcast: " is using a cheat to reach hack"
+  report: "It looks like you are using a cheat that allows you to reach hack. You will be a kicker and report to the staff."
+  kick-message: "You were kicked for cheat."
+  ban-message: "You have been banned for Cheat."
+
+#--------------------------------------------------------------------
+# STOCKAGE : NOT TOUCHED
+#--------------------------------------------------------------------
+player-kick-count: {}
+langage: en_GB
